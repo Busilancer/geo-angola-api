@@ -2,6 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CityController;
+use App\Http\Controllers\MunicipalityController;
+use App\Http\Controllers\NeighborhoodController;
+use App\Http\Controllers\ProvinceController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +22,3 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::resource('provinces', 'ProvinceController');
-Route::resource('cities', 'CityController');
-Route::resource('municipalities', 'MunicipalityController');
-Route::resource('Neighborhoods', 'neighborhoodController');
